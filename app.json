@@ -16,7 +16,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow App to access your media files"
+      },
+      "bundleIdentifier": "com.elamirizidani.Radiant"
     },
     "android": {
       "adaptiveIcon": {
@@ -30,10 +34,26 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-localization",
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "35a843e2-dbd1-4e8e-9768-03795a5946d9"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/35a843e2-dbd1-4e8e-9768-03795a5946d9"
     }
   }
 }
